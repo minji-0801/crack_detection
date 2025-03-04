@@ -1,0 +1,46 @@
+<table cellspacing="0" style="width:100%;border-collapse:collapse;" border="1">
+    <caption style="text-align: left;">
+        2025년 1학기 여석 확인 시스템
+    </caption>
+    <thead>
+        <tr style="background: #0770BB; color: #fff;">
+            <th scope="col" style="width:12%;">학수번호</th>
+            <th scope="col" style="width:8%;">과목명</th>
+            <th scope="col" style="width:3%;">학년</th>
+            <th scope="col" style="width:5%;">학점</th>
+            <th scope="col" style="width:5%;">과목구분</th>
+            <th scope="col" style="width:12%;">시간 및 강의실</th>
+            <th scope="col" style="width:5%;">담당교수</th>
+            <th scope="col" style="width:5%;">평가방식</th>
+            <th scope="col" style="width:8%;">학과</th>
+            <th scope="col" style="width:5%;">비고</th>
+            <th scope="col" style="width:10%;">여석</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if course_list %}
+        {% for course in course_list %}
+        <tr>
+            <th scope="col" style="width:12%;">{{ course.code }}</th>
+            <th scope="col" style="width:8%;">{{ course.name }}</th>
+            <th scope="col" style="width:3%;">{{ course.grade }}</th>
+            <th scope="col" style="width:5%;">{{ course.credit }}</th>
+            <th scope="col" style="width:5%;">{{ course.subject }}</th>
+            <th scope="col" style="width:12%;">{{ course.time_and_classroom }}</th>
+            <th scope="col" style="width:5%;">{{ course.professor }}</th>
+            <th scope="col" style="width:5%;">{{ course.evaluation_method }}</th>
+            <th scope="col" style="width:5%;">{{ course.major_name }}</th>
+            <th scope="col" style="width:5%;">{{ course.remarks }}</th>
+            <th scope="col" style="width:10%;">{{ course.vacancy }}</th>
+        </tr>
+        {% endfor %}
+        {% else %}
+        <tr>
+            <td colspan="11" style="text-align: center;">
+                조건에 맞도록 검색해주세요.
+            </td>
+        </tr>
+        {% endif %}
+
+    </tbody>
+</table>

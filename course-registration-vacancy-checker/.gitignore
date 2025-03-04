@@ -1,0 +1,28 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# Distribution / packaging
+build/
+
+# database
+db.sqlite3
+
+# Environments
+inhaenv
+
+# secret
+secrets.json
+
+# etc
+.DS_Store
+notification.md
+
+# py file
+config/major_creator.py
+
+# migrations
+config/sugang/migrations/**
+config/craswer/migrations/**
+
+# static
+static
